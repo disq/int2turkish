@@ -12,7 +12,7 @@ func TestTurkish(t *testing.T) {
 	}{
 		{
 			input:  0,
-			output: Zero,
+			output: "Sıfır",
 		},
 		{
 			input:  1,
