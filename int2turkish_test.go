@@ -11,6 +11,10 @@ func TestTurkish(t *testing.T) {
 		output string
 	}{
 		{
+			input:  0,
+			output: Zero,
+		},
+		{
 			input:  1,
 			output: "Bir",
 		},

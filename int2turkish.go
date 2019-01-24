@@ -1,5 +1,7 @@
 package int2turkish
 
+const Zero = "Sıfır"
+
 // Text gets an int64 and returns a string slice in Turkish.
 func Text(num int64) []string {
 	var ret []string
@@ -37,8 +39,9 @@ func Text(num int64) []string {
 		ret = append(ret, strs[p-1])
 		num = num - (p * step)
 	}
-	if num > 0 && num < 10 {
+	if (len(ret) == 0 && num == 0) || (num > 0 && num < 10) {
 		strs := []string{
+			Zero,
 			"Bir",
 			"İki",
 			"Üç",
@@ -49,7 +52,7 @@ func Text(num int64) []string {
 			"Sekiz",
 			"Dokuz",
 		}
-		ret = append(ret, strs[num-1])
+		ret = append(ret, strs[num])
 	}
 
 	return ret
