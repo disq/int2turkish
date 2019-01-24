@@ -11,13 +11,15 @@ var (
 func Text(num int64) []string {
 	var ret []string
 
+	const excludeStepFromIdx = 2
+
 	{
 		for i := len(StepStrs) - 1; i >= 0; i-- {
 			step := Steps[i]
 
 			if num >= step {
 				p := num / step
-				if p > 1 {
+				if i >= excludeStepFromIdx || p > 1 {
 					ret = append(ret, Text(p)...)
 				}
 				ret = append(ret, StepStrs[i])

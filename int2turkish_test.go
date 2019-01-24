@@ -39,12 +39,20 @@ func TestTurkish(t *testing.T) {
 			output: "OtuzBirBinÜçYüzOtuzYedi",
 		},
 		{
-			input:  105300,
-			output: "YüzBeşBinÜçYüz",
+			input:  100300,
+			output: "YüzBinÜçYüz",
+		},
+		{
+			input:  1000042,
+			output: "BirMilyonKırkİki",
 		},
 		{
 			input:  110000042,
 			output: "YüzOnMilyonKırkİki",
+		},
+		{
+			input:  1001000100011,
+			output: "BirTrilyonBirMilyarYüzBinOnBir",
 		},
 	}
 
